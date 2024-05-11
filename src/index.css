@@ -21,19 +21,45 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   filter: brightness(90%);
+  animation: change 10s infinite ease-in-out;
 }
 
 /* For mobile screens */
-@media (max-width: 768px) {
-  .hero {
-    background-image: url("./assets/mob.jpg");
-  }
-}
+
 
 /* For laptops and larger screens */
 @media (min-width: 769px) {
   .hero {
     background-image: url("./assets/hero.jpg");
+  }
+}
+
+
+
+@keyframes change{
+  0%
+  {
+      background-image: url(./assets/hero.jpg);
+  }
+  20%
+  {
+      background-image: url(./assets/hero6.jpg);
+  }
+  40%
+  {
+      background-image: url(./assets/hero1.jpg);
+  }
+  60%
+  {
+      background-image: url(./assets/hero2.jpg);
+  }
+  80%
+  {
+      background-image: url(./assets/hero3.jpg);
+  }
+  100%
+  {
+      background-image: url(./assets/hero5.jpg);
   }
 }
 
