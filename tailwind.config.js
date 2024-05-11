@@ -3,6 +3,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/preline/dist/*.js',
+
   ],
   theme: {
     fontFamily :{
@@ -10,6 +12,6 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [ require('preline/plugin'),require('daisyui'),],
 }
 
