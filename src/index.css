@@ -17,12 +17,28 @@ body{
   color: #d5fb00;
 }
 .hero {
-  background-image: url("./assets/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   filter: brightness(90%);
 }
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("./assets/mob.jpg");
+  }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 769px) {
+  .hero {
+    background-image: url("./assets/hero.jpg");
+  }
+}
+
+
+
 
 .marquee {
   position: relative;
@@ -38,6 +54,8 @@ body{
   will-change: transform;
   animation: marquee 32s linear infinite;
 }
+
+
 
 @keyframes marquee {
   from { transform: translateX(0); }
